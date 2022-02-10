@@ -107,37 +107,37 @@ section h1 {
 
 /* Posts list */
 
-.post h2 {
+.comment h2 {
   font-size: 2.5rem;
   margin-bottom: 5px;
 }
 
-.post-excerpt {
+.comment-excerpt {
   padding: 0.25rem 0.25rem;
   border: 1px solid rgb(177, 174, 174);
   border-radius: 7px;
 }
 
-.posts-list .post-excerpt + .post-excerpt {
+.comments-list .comment-excerpt + .comment-excerpt {
   margin-top: 0.5rem;
 }
 
-.posts-container.disabled {
+.comments-container.disabled {
   opacity: 0.5;
 }
 
-.post-excerpt h3 {
+.comment-excerpt h3 {
   margin: 0;
   font-size: 1.5rem;
 }
 
-.post-content {
+.comment-content {
   margin-top: 10px;
 }
 
 .button {
   display: inline-block;
-  background: #b0d219;
+  background: #11e7cb;
   color: white;
   border-radius: 4px;
   font-weight: 700;
@@ -277,5 +277,4 @@ button.reaction-button {
 }
 .col {
   width: 100%;
-  padding: 10px;
 }

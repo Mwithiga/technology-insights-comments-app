@@ -1,4 +1,3 @@
-import { nanoid } from '@reduxjs/toolkit';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -15,13 +14,7 @@ const AddCommentForm = () => {
 
     const onSaveComment = () => {
         if (title && content) {
-            dispatch(
-                commentAdded({
-                    id: nanoid(),
-                    title,
-                    content,
-                })
-            )
+            dispatch(commentAdded(title, content))
         }
 
         setTitle('');
@@ -35,8 +28,8 @@ const AddCommentForm = () => {
             <h2>What's on your mind?</h2>
             <form >
                 <label htmlFor="commentTitle" >Comment Title:</label>
-                <input type="text" id='commentTitle' name='commentTitle' value={title} onChange={onTitleChanged} />
-                <label htmlFor='commentContent'> Comment Content</label>
+                <input type="text" id='commentTitle' name='commentTitle' className='col' value={title} onChange={onTitleChanged} />
+                <label htmlFor='commentContent' className='col'>Comment Content:</label>
                 <textarea name="commentContent" id="commentContent" cols="30" rows="10" value={content} onChange={onContentChanged} className="col"></textarea>
                 <button type="button" onClick={onSaveComment}>Save Comment</button>
             </form>
